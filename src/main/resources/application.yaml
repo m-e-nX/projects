@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://:3306/dbname
+    username: ${MYSQL_USER_USERNAME:root}
+    password: ${MYSQL_USER_PASSWORD:your_password}
+    initialization-mode: always
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.MySQL8Dialect
